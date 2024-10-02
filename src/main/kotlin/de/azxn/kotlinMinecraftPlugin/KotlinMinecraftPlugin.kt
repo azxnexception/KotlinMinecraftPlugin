@@ -1,5 +1,6 @@
 package de.azxn.kotlinMinecraftPlugin
 
+import de.azxn.kotlinMinecraftPlugin.commands.TeleportCommand
 import de.azxn.kotlinMinecraftPlugin.listener.PlayerConnectionListener
 import de.azxn.kotlinMinecraftPlugin.utils.FormattingUtils
 import net.kyori.adventure.text.minimessage.MiniMessage
@@ -13,6 +14,7 @@ class KotlinMinecraftPlugin : JavaPlugin() {
         Bukkit.getConsoleSender().sendMessage(FormattingUtils.empty("<gray>Willkommen zu meinem ersten Kotlin Minecraft Plugin"))
 
         server.pluginManager.registerEvents(PlayerConnectionListener(), this)
+        getCommand("teleport")?.setExecutor(TeleportCommand())
     }
 
     override fun onDisable() {
