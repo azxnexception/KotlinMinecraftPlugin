@@ -1,0 +1,5 @@
+name: KotlinMinecraftPlugin
+version: '1.0-SNAPSHOT'
+main: de.azxn.kotlinMinecraftPlugin.KotlinMinecraftPlugin
+api-version: '1.21'
+authors: [ azxn ]
