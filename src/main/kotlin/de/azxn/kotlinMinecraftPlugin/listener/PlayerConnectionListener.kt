@@ -10,12 +10,12 @@ class PlayerConnectionListener : Listener {
 
     @EventHandler
     fun onPlayerJoin(event: PlayerJoinEvent) {
-        event.joinMessage(FormattingUtils().empty("<dark_gray>[<green>+<dark_gray>] <gray>" + event.player.name));
+        event.joinMessage(FormattingUtils.empty("<dark_gray>[<green>+<dark_gray>] <gray>" + event.player.name));
     }
 
     @EventHandler
     fun onPlayerQuit(event: PlayerQuitEvent) {
-        event.quitMessage(FormattingUtils().empty("<dark_gray>[<red>-<dark_gray>] <gray>" + event.player.name));
+        event.quitMessage(FormattingUtils.empty("<dark_gray>[<red>-<dark_gray>] <gray>" + event.player.name));
     }
 
 

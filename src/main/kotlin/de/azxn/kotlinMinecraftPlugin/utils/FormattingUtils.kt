@@ -9,8 +9,10 @@ class FormattingUtils {
     val PREFIX: Component = empty("<#5418FC>Kotlin <dark_gray>| <gray>")
     val NOPERMISSION: Component = PREFIX.append(empty("<red>You don't have permission to do that!"))
 
-    fun empty(message: String): Component {
-        return MiniMessage.miniMessage().deserialize(message)
+    companion object {
+        fun empty(message: String): Component {
+            return MiniMessage.miniMessage().deserialize(message)
+        }
     }
 
 }
